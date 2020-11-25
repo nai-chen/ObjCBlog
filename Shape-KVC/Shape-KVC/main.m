@@ -84,10 +84,10 @@ int main(int argc, const char* argv[]) {
         NSLog(@"height = %@", [array valueForKeyPath: @"bounds.height"]);
         
         NSLog(@"count = %@", [array valueForKeyPath: @"bounds.@count"]);
-        NSLog(@"sum.height = %@", [array valueForKeyPath: @"bounds.@sum.width"]);
-        NSLog(@"avg.height = %@", [array valueForKeyPath: @"bounds.@avg.width"]);
-        NSLog(@"min.height = %@", [array valueForKeyPath: @"bounds.@min.width"]);
-        NSLog(@"max.height = %@", [array valueForKeyPath: @"bounds.@max.width"]);
+        NSLog(@"sum.width = %@", [array valueForKeyPath: @"bounds.@sum.width"]);
+        NSLog(@"avg.width = %@", [array valueForKeyPath: @"bounds.@avg.width"]);
+        NSLog(@"min.width = %@", [array valueForKeyPath: @"bounds.@min.width"]);
+        NSLog(@"max.width = %@", [array valueForKeyPath: @"bounds.@max.width"]);
         
         NSLog(@"%@", bounds);
         
