@@ -125,7 +125,7 @@ int main(int argc, const char* argv[]) {
             }
 
             predicate = [NSPredicate predicateWithFormat:
-                         @"(width == 20) AND (height = 30)"];
+                         @"(width == 20) AND (height == 30)"];
             if ([predicate evaluateWithObject: bounds]) {
                 NSLog(@"evaluateWithObject AND");
             }
