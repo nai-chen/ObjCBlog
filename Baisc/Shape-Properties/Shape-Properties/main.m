@@ -45,7 +45,7 @@
 
 @end
 
-int main(int argc, const char *argv[]) {
+int main(int argc, const char* argv[]) {
     @autoreleasepool {
         Shape *shape = [[Shape alloc] init];
         NSLog(@"%@", [NSString stringWithFormat:@"(%d, %d)",

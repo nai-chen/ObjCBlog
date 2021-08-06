@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 #import "extension.h"
 
-int main(int argc, const char *argv[]) {
+int main(int argc, const char* argv[]) {
     @autoreleasepool {
         Extension *ext = [Extension new];
         NSLog(@"%@", ext); // (0, 0, 0, 0)

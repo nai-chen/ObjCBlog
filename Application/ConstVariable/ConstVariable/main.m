@@ -7,7 +7,7 @@
 
 #import <Foundation/Foundation.h>
 
-int main(int argc, const char *argv[]) {
+int main(int argc, const char* argv[]) {
     {
         int x = 1;
         int y = 2;

@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-int main(int argc, const char *argv[]) {
+int main(int argc, const char* argv[]) {
     @autoreleasepool {
         NSString *string1 = @"Hello World";
         NSString *string2 = [NSString stringWithFormat:@"Hello World"];

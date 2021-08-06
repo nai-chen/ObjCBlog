@@ -7,7 +7,7 @@
 
 #import <Foundation/Foundation.h>
 
-int main(int argc, const char *argv[]) {
+int main(int argc, const char* argv[]) {
     @autoreleasepool {
         NSString *pattern = @"a[B|C]d";
         NSRegularExpressionOptions option = NSRegularExpressionCaseInsensitive;

@@ -26,7 +26,7 @@
 
 @end
 
-int main(int argc, const char *argv[]) {
+int main(int argc, const char* argv[]) {
     NSAutoreleasePool *pool = [[NSAutoreleasePool alloc] init];
     
     Shape *shape = [Shape new]; // retainCount = 1

@@ -176,7 +176,7 @@ void parameter() {
     NSLog(@"decimalSeparator     %@", [formatter stringFromNumber:@123456.65]);
 }
 
-int main(int argc, const char *argv[]) {
+int main(int argc, const char* argv[]) {
     @autoreleasepool {
         numberStyle();
         roundingMode();

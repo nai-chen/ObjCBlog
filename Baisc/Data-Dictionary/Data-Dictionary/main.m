@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-int main(int argc, const char *argv[]) {
+int main(int argc, const char* argv[]) {
     @autoreleasepool {
         NSDictionary *dict1 = @{@"Mike":@"Mike Jordan", @"Tom":@"Tom Lee"};
         NSDictionary *dict2 = [NSDictionary dictionaryWithObjectsAndKeys:

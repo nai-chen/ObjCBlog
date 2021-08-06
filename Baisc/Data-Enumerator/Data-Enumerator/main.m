@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-int main(int argc, const char * argv[]) {
+int main(int argc, const char* argv[]) {
     @autoreleasepool {
         NSArray *array = @[@"one", @"two", @"three", @"four"];
         NSEnumerator *enumerator = [array objectEnumerator];

@@ -62,7 +62,7 @@ Shape * createShape(int width, int height) {
     return shape;
 }
 
-int main(int argc, const char *argv[]) {
+int main(int argc, const char* argv[]) {
     @autoreleasepool {
         {
             ShapeBounds *bounds = [[ShapeBounds alloc] init];

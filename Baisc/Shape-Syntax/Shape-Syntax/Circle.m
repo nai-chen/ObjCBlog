@@ -18,7 +18,7 @@
 
 @end
 
-int main(int argc, const char *argv[]) {
+int main(int argc, const char* argv[]) {
     @autoreleasepool {
         ShapeBounds *bounds = [ShapeBounds new];
         [bounds setWidth:100 height:60];

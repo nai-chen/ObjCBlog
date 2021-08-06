@@ -65,7 +65,7 @@
 
 @end
 
-int main(int argc, const char *argv[]) {
+int main(int argc, const char* argv[]) {
     @autoreleasepool {
         Rectangle *rect = [[Rectangle alloc] init];
         NSLog(@"%@", rect);

@@ -27,7 +27,7 @@
 
 @end
 
-int main(int argc, const char *argv[]) {
+int main(int argc, const char* argv[]) {
     Shape *shape = [Shape new];
     
     [shape retain]; // retainCount = 2

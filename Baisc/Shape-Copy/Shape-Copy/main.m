@@ -68,7 +68,7 @@
 
 @end
 
-int main(int argc, const char *argv[]) {
+int main(int argc, const char* argv[]) {
     @autoreleasepool {
         Shape *shape = [[Shape alloc] init];
         shape.width = 30;
