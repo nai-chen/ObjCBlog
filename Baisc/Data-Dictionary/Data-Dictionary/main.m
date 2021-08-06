@@ -8,13 +8,13 @@
 
 #import <Foundation/Foundation.h>
 
-int main(int argc, const char * argv[]) {
+int main(int argc, const char *argv[]) {
     @autoreleasepool {
-        NSDictionary* dict1 = @{@"Mike":@"Mike Jordan", @"Tom":@"Tom Lee"};
-        NSDictionary* dict2 = [NSDictionary dictionaryWithObjectsAndKeys:
+        NSDictionary *dict1 = @{@"Mike":@"Mike Jordan", @"Tom":@"Tom Lee"};
+        NSDictionary *dict2 = [NSDictionary dictionaryWithObjectsAndKeys:
                    @"Mike Jordan", @"Mike", @"Tom Lee", @"Tom", nil];
         
-        NSLog(@"%@", [dict1 objectForKey: @"Mike"]);
+        NSLog(@"%@", [dict1 objectForKey:@"Mike"]);
         NSLog(@"%@", dict2[@"Tom"]);
         
         for (id key in dict1) {
@@ -22,14 +22,14 @@ int main(int argc, const char * argv[]) {
         }
     }
     @autoreleasepool {
-        NSMutableDictionary* dict = [NSMutableDictionary dictionaryWithCapacity: 17];
-        [dict setObject: @"Mike Jordan" forKey: @"Mike"];
-        [dict setObject: @"Tom Lee" forKey: @"Tom"];
+        NSMutableDictionary *dict = [NSMutableDictionary dictionaryWithCapacity:17];
+        [dict setObject:@"Mike Jordan" forKey:@"Mike"];
+        [dict setObject:@"Tom Lee" forKey:@"Tom"];
         for (id key in dict) {
             NSLog(@"%@ : %@", key, dict[key]);
         }
         
-        [dict removeObjectForKey: @"Tom"];
+        [dict removeObjectForKey:@"Tom"];
         for (id key in dict) {
             NSLog(@"%@ : %@", key, dict[key]);
         }

@@ -11,23 +11,25 @@
 @end
 
 @implementation Shape
-- (id) init {
+
+- (id)init {
     if (self = [super init]) {
         NSLog(@"Shape init retainCount = %lu", [self retainCount]);
     }
     return self;
 }
 
-- (void) dealloc{
+- (void)dealloc {
     NSLog(@"Shape dealloc called");
     [super dealloc];
 }
+
 @end
 
-int main(int argc, const char * argv[]) {
-    NSAutoreleasePool* pool = [[NSAutoreleasePool alloc] init];
+int main(int argc, const char *argv[]) {
+    NSAutoreleasePool *pool = [[NSAutoreleasePool alloc] init];
     
-    Shape* shape = [Shape new]; // retainCount = 1
+    Shape *shape = [Shape new]; // retainCount = 1
     [shape retain]; // retainCount = 2
     
     [shape autorelease]; // retainCount = 2
@@ -38,7 +40,7 @@ int main(int argc, const char * argv[]) {
     [pool release];
     
     @autoreleasepool {
-        Shape* shape = [Shape new]; // retainCount = 1
+        Shape *shape = [Shape new]; // retainCount = 1
         [shape retain]; // retainCount = 2
         
         [shape autorelease]; // retainCount = 2

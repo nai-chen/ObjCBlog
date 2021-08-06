@@ -17,13 +17,13 @@
 
 @implementation Shape
 
-- (id) init {
-    if (self = [self initWithWidth: 20 height: 20]) {
+- (id)init {
+    if (self = [self initWithWidth:20 height:20]) {
     }
     return self;
 }
 
-- (id) initWithWidth: (int) w height: (int) h {
+- (id)initWithWidth:(int)w height:(int)h {
     if (self = [super init]) {
         width = w;
         height = h;
@@ -31,8 +31,8 @@
     return self;
 }
 
-- (NSString*) description {
-    return [NSString stringWithFormat: @"(%d, %d)", width, height];
+- (NSString *)description {
+    return [NSString stringWithFormat:@"(%d, %d)", width, height];
 }
 
 @end
@@ -41,36 +41,37 @@
     int radius;
 }
 
-- (void) setRadius: (int) radius;
+- (void) setRadius:(int)radius;
 
 @end
 
 @implementation Rectangle
 
-- (id) initWithWidth: (int) w height: (int) h {
-    if (self = [super initWithWidth: w height: h]) {
+- (id)initWithWidth:(int)w height:(int)h {
+    if (self = [super initWithWidth:w height:h]) {
         radius = 10;
     }
     return self;
 }
 
-- (void) setRadius: (int) r {
+- (void)setRadius:(int)r {
     radius = r;
 }
 
-- (NSString*) description {
-    return [NSString stringWithFormat: @"(%d, %d) radius = %d",
+- (NSString *)description {
+    return [NSString stringWithFormat:@"(%d, %d) radius = %d",
             width, height, radius];
 }
+
 @end
 
-int main(int argc, const char* argv[]) {
+int main(int argc, const char *argv[]) {
     @autoreleasepool {
-        Rectangle* rect = [[Rectangle alloc] init];
+        Rectangle *rect = [[Rectangle alloc] init];
         NSLog(@"%@", rect);
         
-        rect = [[Rectangle alloc] initWithWidth: 100 height: 100];
-        [rect setRadius: 20];
+        rect = [[Rectangle alloc] initWithWidth:100 height:100];
+        [rect setRadius:20];
         NSLog(@"%@", rect);
     }
     return 0;

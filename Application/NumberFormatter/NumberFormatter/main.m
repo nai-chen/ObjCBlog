@@ -8,8 +8,8 @@
 #import <Foundation/Foundation.h>
 
 void numberStyle() {
-    NSNumberFormatter* formatter = [NSNumberFormatter new];
-    NSNumber* number = [NSNumber numberWithDouble:123456.654321];
+    NSNumberFormatter *formatter = [NSNumberFormatter new];
+    NSNumber *number = [NSNumber numberWithDouble:123456.654321];
     
     NSLog(@"DefaultStyle    %@", [formatter stringFromNumber:number]);
     
@@ -55,7 +55,7 @@ void numberStyle() {
 }
 
 void roundingMode() {
-    NSNumberFormatter* formatter = [NSNumberFormatter new];
+    NSNumberFormatter *formatter = [NSNumberFormatter new];
     
     // 向上取整
     formatter.roundingMode = NSNumberFormatterRoundCeiling;
@@ -108,8 +108,8 @@ void roundingMode() {
 }
 
 void prefixSuffix() {
-    NSNumberFormatter* formatter = [NSNumberFormatter new];
-    NSNumber* number = [NSNumber numberWithDouble:123456.654321];
+    NSNumberFormatter *formatter = [NSNumberFormatter new];
+    NSNumber *number = [NSNumber numberWithDouble:123456.654321];
     
     formatter.positivePrefix = @"$"; // 前缀符号
     formatter.positiveSuffix = @"元"; // 后缀符号
@@ -125,7 +125,7 @@ void prefixSuffix() {
 }
 
 void padding() {
-    NSNumberFormatter* formatter = [NSNumberFormatter new];
+    NSNumberFormatter *formatter = [NSNumberFormatter new];
     formatter.formatWidth = 10;
     formatter.paddingCharacter = @"#";
     formatter.positivePrefix = @"$"; // 前缀符号
@@ -149,7 +149,7 @@ void padding() {
 }
 
 void digits() {
-    NSNumberFormatter* formatter = [NSNumberFormatter new];
+    NSNumberFormatter *formatter = [NSNumberFormatter new];
     formatter.maximumFractionDigits = 4;
     formatter.minimumFractionDigits = 2;
     
@@ -164,7 +164,7 @@ void digits() {
 }
 
 void parameter() {
-    NSNumberFormatter* formatter = [NSNumberFormatter new];
+    NSNumberFormatter *formatter = [NSNumberFormatter new];
     formatter.numberStyle = NSNumberFormatterDecimalStyle;
     
     NSLog(@"groupingSeparator    %@", [formatter stringFromNumber:@123456789]);
@@ -176,7 +176,7 @@ void parameter() {
     NSLog(@"decimalSeparator     %@", [formatter stringFromNumber:@123456.65]);
 }
 
-int main(int argc, const char * argv[]) {
+int main(int argc, const char *argv[]) {
     @autoreleasepool {
         numberStyle();
         roundingMode();

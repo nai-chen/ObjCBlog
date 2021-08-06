@@ -9,9 +9,9 @@
 #import <Foundation/Foundation.h>
 #import "NSDictionary+Gson.h"
 
-int main(int argc, const char * argv[]) {
+int main(int argc, const char *argv[]) {
     @autoreleasepool {
-        NSDictionary* dict = @{@"Mike" : @"Mike Jordan", @"Tom" : @"Tom Lee"};
+        NSDictionary *dict = @{@"Mike" : @"Mike Jordan", @"Tom" : @"Tom Lee"};
         NSLog(@"%@", [dict toGson]);
     }
     return 0;

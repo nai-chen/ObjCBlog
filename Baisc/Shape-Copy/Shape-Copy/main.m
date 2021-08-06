@@ -20,7 +20,7 @@
 @synthesize width;
 @synthesize height;
 
-- (id) init {
+- (id)init {
     if (self = [super init]) {
         width = 20;
         height = 20;
@@ -29,16 +29,16 @@
     return self;
 }
 
-- (id) copyWithZone: (NSZone*) zone {
-    Shape* shapeCopy = [[[self class] allocWithZone: zone] init];
+- (id)copyWithZone:(NSZone *)zone {
+    Shape *shapeCopy = [[[self class] allocWithZone: zone] init];
     shapeCopy.width = width;
     shapeCopy.height = height;
     
     return shapeCopy;
 }
 
-- (NSString*) description {
-    return [NSString stringWithFormat: @"(%d, %d)",
+- (NSString *)description {
+    return [NSString stringWithFormat:@"(%d, %d)",
             [self width], [self height]];
 }
 
@@ -54,28 +54,28 @@
 
 @synthesize radius;
 
-- (id) copyWithZone: (NSZone*) zone {
-    Rectangle* rectangleCopy = [super copyWithZone: zone];
+- (id)copyWithZone:(NSZone *)zone {
+    Rectangle *rectangleCopy = [super copyWithZone:zone];
     rectangleCopy.radius = [self radius];
     
     return rectangleCopy;
 }
 
-- (NSString*) description {
-    return [NSString stringWithFormat: @"(%d, %d) radius = %d",
+- (NSString *)description {
+    return [NSString stringWithFormat:@"(%d, %d) radius = %d",
             [self width], [self height], [self radius]];
 }
 
 @end
 
-int main(int argc, const char* argv[]) {
+int main(int argc, const char *argv[]) {
     @autoreleasepool {
-        Shape* shape = [[Shape alloc] init];
+        Shape *shape = [[Shape alloc] init];
         shape.width = 30;
         shape.height = 25;
         NSLog(@"%@", [shape copy]);
         
-        Rectangle* rect = [[Rectangle alloc] init];
+        Rectangle *rect = [[Rectangle alloc] init];
         rect.width = 100;
         rect.height = 60;
         rect.radius = 5;

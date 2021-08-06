@@ -10,15 +10,15 @@
 
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
-        NSArray* array = @[@"one", @"two", @"three", @"four"];
-        NSEnumerator* enumerator = [array objectEnumerator];
+        NSArray *array = @[@"one", @"two", @"three", @"four"];
+        NSEnumerator *enumerator = [array objectEnumerator];
         
         id string;
-        while(string = [enumerator nextObject]) {
+        while (string = [enumerator nextObject]) {
             NSLog(@"%@", string);
         }
         
-        for (NSString* string in array) {
+        for (NSString *string in array) {
             NSLog(@"%@", string);
         }
     }

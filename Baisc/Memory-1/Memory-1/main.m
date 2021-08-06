@@ -12,21 +12,23 @@
 @end
 
 @implementation Shape
-- (id) init {
+
+- (id)init {
     if (self = [super init]) {
         NSLog(@"Shape init retainCount = %lu", [self retainCount]);
     }
     return self;
 }
 
-- (void) dealloc{
+- (void)dealloc {
     NSLog(@"Shape dealloc called");
     [super dealloc];
 }
+
 @end
 
-int main(int argc, const char* argv[]) {
-    Shape* shape = [Shape new];
+int main(int argc, const char *argv[]) {
+    Shape *shape = [Shape new];
     
     [shape retain]; // retainCount = 2
     NSLog(@"Shape retainCount = %lu", [shape retainCount]);

@@ -11,19 +11,19 @@
 
 @implementation Circle
 
-- (void) draw {
+- (void)draw {
     [super draw];
     NSLog(@"draw Circle.");
 }
 
 @end
 
-int main(int argc, const char* argv[]) {
+int main(int argc, const char *argv[]) {
     @autoreleasepool {
-        ShapeBounds* bounds = [ShapeBounds new];
-        [bounds setWidth: 100 height: 60];
-        Shape* circle = [Circle new];
-        [circle setBounds: bounds];
+        ShapeBounds *bounds = [ShapeBounds new];
+        [bounds setWidth:100 height:60];
+        Shape *circle = [Circle new];
+        [circle setBounds:bounds];
         [circle draw];
     }
     return 0;

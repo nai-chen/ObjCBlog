@@ -10,19 +10,19 @@
 
 @implementation NSDictionary (Gson)
 
-- (NSString*) toGson {
-    NSMutableString* gson = [NSMutableString stringWithCapacity: 42];
+- (NSString *)toGson {
+    NSMutableString *gson = [NSMutableString stringWithCapacity:42];
     
-    [gson appendString: @"{"];
+    [gson appendString:@"{"];
     for (id key in self) {
         [gson appendFormat:@"%@ : \"%@\", ", key, self[key]];
     }
     NSUInteger len = [gson length];
     if (len > 1) {
         NSRange range = NSMakeRange(len - 2, 2);
-        [gson deleteCharactersInRange: range];
+        [gson deleteCharactersInRange:range];
     }
-    [gson appendString: @"}"];
+    [gson appendString:@"}"];
     
     return gson;
 }

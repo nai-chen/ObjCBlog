@@ -11,7 +11,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface GlobalConstant : NSObject
 
-extern NSString* const GC_NUMBER;
+extern NSString * const GC_NUMBER;
 
 @end
 

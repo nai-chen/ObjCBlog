@@ -17,89 +17,89 @@
 
 @implementation ShapeBounds
 
-- (NSString*) description {
-    return [NSString stringWithFormat: @"(%d, %d)", width, height];
+- (NSString *)description {
+    return [NSString stringWithFormat:@"(%d, %d)", width, height];
 }
 
 @end
 
 @interface Shape : NSObject {
-    ShapeBounds* bounds;
+    ShapeBounds *bounds;
 }
 
 @end
 
 @implementation Shape
 
-- (id) init {
+- (id)init {
     if (self = [super init]) {
         bounds = [[ShapeBounds alloc] init];
     }
     return self;
 }
 
-- (NSString*) description {
-    return [NSString stringWithFormat: @"Shape bounds = %@", bounds];
+- (NSString *)description {
+    return [NSString stringWithFormat:@"Shape bounds = %@", bounds];
 }
 
 @end
 
-Shape* createShape(int width, int height) {
-    Shape* shape = [[Shape alloc] init];
+Shape * createShape(int width, int height) {
+    Shape *shape = [[Shape alloc] init];
     
-    [shape setValue: [NSNumber numberWithInt: width] forKeyPath: @"bounds.width"];
-    [shape setValue: [NSNumber numberWithInt: height] forKeyPath: @"bounds.height"];
+    [shape setValue:[NSNumber numberWithInt:width] forKeyPath:@"bounds.width"];
+    [shape setValue:[NSNumber numberWithInt:height] forKeyPath:@"bounds.height"];
     
     return shape;
 }
 
-int main(int argc, const char* argv[]) {
+int main(int argc, const char *argv[]) {
     @autoreleasepool {
-        ShapeBounds* bounds = [[ShapeBounds alloc] init];
+        ShapeBounds *bounds = [[ShapeBounds alloc] init];
         NSLog(@"%@", bounds);
         
-        [bounds setValue: [NSNumber numberWithInt: 20] forKey: @"width"];
-        [bounds setValue: [NSNumber numberWithInt: 30] forKey: @"height"];
+        [bounds setValue:[NSNumber numberWithInt:20] forKey:@"width"];
+        [bounds setValue:[NSNumber numberWithInt:30] forKey:@"height"];
         NSLog(@"%@", bounds);
         
-        NSLog(@"width = %@, height = %@", [bounds valueForKey: @"width"],
-              [bounds valueForKey: @"height"]);
+        NSLog(@"width = %@, height = %@", [bounds valueForKey:@"width"],
+              [bounds valueForKey:@"height"]);
         
-        Shape* shape = [[Shape alloc] init];
+        Shape *shape = [[Shape alloc] init];
         NSLog(@"%@", shape);
         
-        [shape setValue: [NSNumber numberWithInt: 20] forKeyPath: @"bounds.width"];
-        [shape setValue: [NSNumber numberWithInt: 30] forKeyPath: @"bounds.height"];
+        [shape setValue:[NSNumber numberWithInt:20] forKeyPath:@"bounds.width"];
+        [shape setValue:[NSNumber numberWithInt:30] forKeyPath:@"bounds.height"];
         NSLog(@"%@", shape);
         
-        NSLog(@"width = %@, height = %@", [shape valueForKeyPath: @"bounds.width"],
-              [shape valueForKeyPath: @"bounds.height"]);
+        NSLog(@"width = %@, height = %@", [shape valueForKeyPath:@"bounds.width"],
+              [shape valueForKeyPath:@"bounds.height"]);
         
-        NSMutableArray* array = [NSMutableArray arrayWithCapacity: 17];
-        [array addObject: createShape(20, 30)];
-        [array addObject: createShape(40, 50)];
-        [array addObject: createShape(60, 45)];
+        NSMutableArray *array = [NSMutableArray arrayWithCapacity:17];
+        [array addObject:createShape(20, 30)];
+        [array addObject:createShape(40, 50)];
+        [array addObject:createShape(60, 45)];
         
-        NSLog(@"width = %@", [array valueForKeyPath: @"bounds.width"]);
-        NSLog(@"height = %@", [array valueForKeyPath: @"bounds.height"]);
+        NSLog(@"width = %@", [array valueForKeyPath:@"bounds.width"]);
+        NSLog(@"height = %@", [array valueForKeyPath:@"bounds.height"]);
         
-        NSLog(@"count = %@", [array valueForKeyPath: @"bounds.@count"]);
-        NSLog(@"sum.width = %@", [array valueForKeyPath: @"bounds.@sum.width"]);
-        NSLog(@"avg.width = %@", [array valueForKeyPath: @"bounds.@avg.width"]);
-        NSLog(@"min.width = %@", [array valueForKeyPath: @"bounds.@min.width"]);
-        NSLog(@"max.width = %@", [array valueForKeyPath: @"bounds.@max.width"]);
+        NSLog(@"count = %@", [array valueForKeyPath:@"bounds.@count"]);
+        NSLog(@"sum.width = %@", [array valueForKeyPath:@"bounds.@sum.width"]);
+        NSLog(@"avg.width = %@", [array valueForKeyPath:@"bounds.@avg.width"]);
+        NSLog(@"min.width = %@", [array valueForKeyPath:@"bounds.@min.width"]);
+        NSLog(@"max.width = %@", [array valueForKeyPath:@"bounds.@max.width"]);
         
         NSLog(@"%@", bounds);
         
         {
-            NSArray* array = [NSArray arrayWithObjects: @"width", @"height", nil];
-            NSDictionary* dict = [bounds dictionaryWithValuesForKeys: array];
+            NSArray *array = [NSArray arrayWithObjects:@"width", @"height", nil];
+            NSDictionary *dict = [bounds dictionaryWithValuesForKeys:array];
             NSLog(@"dict = %@", dict);
             
-            NSDictionary* newDict = [NSDictionary dictionaryWithObjectsAndKeys:
-                                     [NSNumber numberWithInt: 40], @"width",
-                                     [NSNumber numberWithInt: 50], @"height", nil];
-            [bounds setValuesForKeysWithDictionary: newDict];
+            NSDictionary *newDict = [NSDictionary dictionaryWithObjectsAndKeys:
+                                     [NSNumber numberWithInt:40], @"width",
+                                     [NSNumber numberWithInt:50], @"height", nil];
+            [bounds setValuesForKeysWithDictionary:newDict];
             NSLog(@"%@", bounds);
         }
     }

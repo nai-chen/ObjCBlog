@@ -10,13 +10,13 @@
 
 @interface Shape : NSObject
 
-- (void) draw;
+- (void)draw;
 
 @end
 
 @implementation Shape
 
-- (void) draw {
+- (void)draw {
     NSLog(@"Shape draw");
 }
 
@@ -24,17 +24,17 @@
 
 int main(int argc, const char* argv[]) {
     @autoreleasepool {
-        Shape* shape = [[Shape alloc] init];
+        Shape *shape = [[Shape alloc] init];
         [shape draw];
         
-        if ([shape respondsToSelector: @selector(draw)]) {
-            [shape performSelector: @selector(draw)];
+        if ([shape respondsToSelector:@selector(draw)]) {
+            [shape performSelector:@selector(draw)];
         } else {
             NSLog(@"Not has draw");
         }
         
-        if ([shape respondsToSelector: @selector(drawShape)]) {
-            [shape performSelector: @selector(drawShape)];
+        if ([shape respondsToSelector:@selector(drawShape)]) {
+            [shape performSelector:@selector(drawShape)];
         } else {
             NSLog(@"Not has drawShape");
         }

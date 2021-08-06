@@ -7,12 +7,12 @@
 
 #import <Foundation/Foundation.h>
 
-int main(int argc, const char * argv[]) {
+int main(int argc, const char *argv[]) {
     {
         int x = 1;
         int y = 2;
 
-        int* const xp = &x;
+        int * const xp = &x;
         NSLog(@"%p", xp);
         NSLog(@"%d", *xp);
 

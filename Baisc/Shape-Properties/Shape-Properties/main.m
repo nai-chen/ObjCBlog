@@ -20,7 +20,7 @@
 @synthesize width;
 @synthesize height;
 
-- (id) init {
+- (id)init {
     if (self = [super init]) {
         width = 20;
         height = 20;
@@ -45,16 +45,16 @@
 
 @end
 
-int main(int argc, const char* argv[]) {
+int main(int argc, const char *argv[]) {
     @autoreleasepool {
-        Shape* shape = [[Shape alloc] init];
-        NSLog(@"%@", [NSString stringWithFormat: @"(%d, %d)",
+        Shape *shape = [[Shape alloc] init];
+        NSLog(@"%@", [NSString stringWithFormat:@"(%d, %d)",
                       [shape width], [shape height]]);
         
-        NSLog(@"%@", [NSString stringWithFormat: @"(%d, %d)",
+        NSLog(@"%@", [NSString stringWithFormat:@"(%d, %d)",
                       shape.width, shape.height]);
         
-        Rectangle* rect = [[Rectangle alloc] init];
+        Rectangle *rect = [[Rectangle alloc] init];
         rect.radius = 20;
         NSLog(@"Rectangle radius = %d", [rect radius]);
     }

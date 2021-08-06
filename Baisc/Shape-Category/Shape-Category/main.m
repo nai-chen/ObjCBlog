@@ -9,11 +9,11 @@
 #import <Foundation/Foundation.h>
 #import "Shape.h"
 
-int main(int argc, const char* argv[]) {
+int main(int argc, const char *argv[]) {
     @autoreleasepool {
         Shape* shape = [[Shape alloc] init];
-        [shape setWidth: 30 andHeight: 40];
-        [shape setColor: 23];
+        [shape setWidth:30 andHeight:40];
+        [shape setColor:23];
         
         NSLog(@"%@", shape);
     }

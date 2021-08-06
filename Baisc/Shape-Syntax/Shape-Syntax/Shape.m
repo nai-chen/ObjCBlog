@@ -11,11 +11,11 @@
 
 @implementation Shape
 
-- (void) setBounds: (ShapeBounds *) b {
+- (void)setBounds:(ShapeBounds *)b {
     bounds = b;
 }
 
-- (void) draw {
+- (void)draw {
     NSLog(@"draw Shape at %@.", bounds);
 }
 

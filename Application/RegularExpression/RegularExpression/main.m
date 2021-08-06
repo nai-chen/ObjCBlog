@@ -7,16 +7,16 @@
 
 #import <Foundation/Foundation.h>
 
-int main(int argc, const char * argv[]) {
+int main(int argc, const char *argv[]) {
     @autoreleasepool {
-        NSString* pattern = @"a[B|C]d";
+        NSString *pattern = @"a[B|C]d";
         NSRegularExpressionOptions option = NSRegularExpressionCaseInsensitive;
-        NSError* error = nil;
+        NSError *error = nil;
         
-        NSString* str = @"abc abd acb acd adb adc";
+        NSString *str = @"abc abd acb acd adb adc";
         
         // 0
-        NSRegularExpression* regular = [NSRegularExpression regularExpressionWithPattern:pattern options:0 error:&error];
+        NSRegularExpression *regular = [NSRegularExpression regularExpressionWithPattern:pattern options:0 error:&error];
         NSLog(@"%ld", [regular numberOfMatchesInString:str options:0 range:NSMakeRange(0, str.length)]);
         
         // 2
@@ -24,7 +24,7 @@ int main(int argc, const char * argv[]) {
         NSLog(@"%ld", [regular numberOfMatchesInString:str options:0 range:NSMakeRange(0, str.length)]);
         
         // abd
-        NSTextCheckingResult* result = [regular firstMatchInString:str options:0 range:NSMakeRange(0, str.length)];
+        NSTextCheckingResult *result = [regular firstMatchInString:str options:0 range:NSMakeRange(0, str.length)];
         if (result.range.location != NSNotFound) {
             NSLog(@"firstMatchInString result: %@", [str substringWithRange: result.range]);
         }
@@ -37,8 +37,8 @@ int main(int argc, const char * argv[]) {
         
         // abd
         // acd
-        NSArray* results = [regular matchesInString:str options:0 range:NSMakeRange(0, str.length)];
-        for (NSTextCheckingResult* result in results) {
+        NSArray *results = [regular matchesInString:str options:0 range:NSMakeRange(0, str.length)];
+        for (NSTextCheckingResult *result in results) {
             NSLog(@"matchesInString result: %@", [str substringWithRange:result.range]);
         }
         
@@ -49,12 +49,12 @@ int main(int argc, const char * argv[]) {
         }];
         
         // abc ### acb ### adb adc
-        NSString* replaceStr = [regular stringByReplacingMatchesInString:str options:0 range:NSMakeRange(0, str.length) withTemplate:@"###"];
+        NSString *replaceStr = [regular stringByReplacingMatchesInString:str options:0 range:NSMakeRange(0, str.length) withTemplate:@"###"];
         NSLog(@"stringByReplacingMatchesInString result: %@", replaceStr);
         
         // 2
         // abc ### acb ### adb adc
-        NSMutableString* mutableString = [NSMutableString stringWithString:str];
+        NSMutableString *mutableString = [NSMutableString stringWithString:str];
         NSUInteger number = [regular replaceMatchesInString:mutableString options:0 range:NSMakeRange(0, mutableString.length) withTemplate:@"###"];
         NSLog(@"replaceMatchesInString number = %ld result: %@", number, mutableString);
         

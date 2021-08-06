@@ -13,7 +13,7 @@ int add(int value) {
     return sum;
 }
 
-int main(int argc, const char * argv[]) {
+int main(int argc, const char *argv[]) {
     NSLog(@"%d", add(1));
     NSLog(@"%d", add(3));
     NSLog(@"%d", add(5));

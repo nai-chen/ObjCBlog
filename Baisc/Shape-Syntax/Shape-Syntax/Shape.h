@@ -10,10 +10,10 @@
 @class ShapeBounds;
 
 @interface Shape : NSObject {
-    ShapeBounds* bounds;
+    ShapeBounds *bounds;
 }
 
-- (void) setBounds: (ShapeBounds*) bounds;
-- (void) draw;
+- (void)setBounds:(ShapeBounds *)bounds;
+- (void)draw;
 
 @end

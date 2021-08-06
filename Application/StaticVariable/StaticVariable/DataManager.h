@@ -11,7 +11,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface DataManager : NSObject
 
-+ (DataManager*) getDataManager;
++ (DataManager *)getDataManager;
 
 @end
 

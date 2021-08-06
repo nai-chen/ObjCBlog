@@ -11,7 +11,7 @@
 
 @implementation Shape (ShapeColor)
 
-- (void) setColor: (int) c {
+- (void)setColor:(int)c {
     color = c;
 }
 

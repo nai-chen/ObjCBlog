@@ -9,7 +9,7 @@
 
 @implementation DataManager
 
-static DataManager* manager = nil;
+static DataManager *manager = nil;
 
 + (DataManager *)getDataManager {
     static dispatch_once_t once;

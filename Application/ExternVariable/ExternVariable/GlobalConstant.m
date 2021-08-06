@@ -9,6 +9,6 @@
 
 @implementation GlobalConstant
 
-NSString* const GC_NUMBER = @"0123456789";
+NSString * const GC_NUMBER = @"0123456789";
 
 @end

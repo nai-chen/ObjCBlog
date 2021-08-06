@@ -17,12 +17,12 @@
 
 @interface Shape (ShapeBounds)
 
-- (void) setWidth: (int) width andHeight: (int) height;
+- (void)setWidth:(int)width andHeight:(int)height;
 
 @end
 
 @interface Shape (ShapeColor)
 
-- (void) setColor: (int) color;
+- (void)setColor:(int)color;
 
 @end

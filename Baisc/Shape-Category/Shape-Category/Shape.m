@@ -10,8 +10,8 @@
 
 @implementation Shape
 
-- (NSString*) description {
-    return [NSString stringWithFormat: @"shape (%d, %d) color = %d",
+- (NSString *)description {
+    return [NSString stringWithFormat:@"shape (%d, %d) color = %d",
             width, height, color];
 }
 

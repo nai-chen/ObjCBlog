@@ -10,6 +10,6 @@
 
 @interface NSDictionary (Gson)
 
-- (NSString*) toGson;
+- (NSString *)toGson;
 
 @end

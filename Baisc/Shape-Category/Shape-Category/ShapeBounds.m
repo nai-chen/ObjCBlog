@@ -11,7 +11,7 @@
 
 @implementation Shape (ShapeBounds)
 
-- (void) setWidth: (int) w andHeight: (int) h {
+- (void)setWidth:(int)w andHeight:(int)h {
     width = w;
     height = h;
 }

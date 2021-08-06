@@ -12,6 +12,6 @@
     int width, height;
 }
 
-- (void) setWidth: (int) width height: (int) height;
+- (void)setWidth:(int)width height:(int)height;
 
 @end

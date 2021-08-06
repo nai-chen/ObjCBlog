@@ -8,24 +8,24 @@
 
 #import <Foundation/Foundation.h>
 
-int main(int argc, const char * argv[]) {
+int main(int argc, const char *argv[]) {
     @autoreleasepool {
-        NSDate* currentDate = [NSDate date];
-        NSDate* earlierDate = [NSDate dateWithTimeIntervalSinceNow: -60];
-        NSDate* laterDate = [[NSDate alloc] initWithTimeInterval: 60
-                   sinceDate: currentDate];
+        NSDate *currentDate = [NSDate date];
+        NSDate *earlierDate = [NSDate dateWithTimeIntervalSinceNow:-60];
+        NSDate *laterDate = [[NSDate alloc] initWithTimeInterval:60
+                   sinceDate:currentDate];
         
-        if ([currentDate laterDate: laterDate]) {
+        if ([currentDate laterDate:laterDate]) {
             NSLog(@"laterDate");
         }
         
-        if ([currentDate earlierDate: earlierDate]) {
+        if ([currentDate earlierDate:earlierDate]) {
             NSLog(@"earlierDate");
         }
         
         NSDateFormatter *df = [[NSDateFormatter alloc] init];
-        [df setDateFormat: @"YYYY-MM-dd hh:mm:ss"];
-        NSLog(@"%@", [df stringFromDate: currentDate]);
+        [df setDateFormat:@"YYYY-MM-dd hh:mm:ss"];
+        NSLog(@"%@", [df stringFromDate:currentDate]);
     }
     return 0;
 }

@@ -30,8 +30,8 @@
     param4 = 50;
 }
 
-- (NSString*) description {
-    return [NSString stringWithFormat: @"(%d %d %d %d)",
+- (NSString *)description {
+    return [NSString stringWithFormat:@"(%d %d %d %d)",
             param1, param2, param3, param4];
 }
 
